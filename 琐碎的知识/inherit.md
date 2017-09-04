@@ -62,3 +62,5 @@ Object类是Java中所有类的始祖，在Java中每个类都是由它拓展而
 
 对于static boolean equals\(Object a, Object b\)，如果a和b都为null，放回true，如果其中之一为null，则放回false。
 
+JDK类中有一些类覆盖了oject类的equals\(\)方法，比较规则为：如果两个对象的类型一致，并且内容一致，则返回true,这些类有：java.io.file,java.util.Date,java.lang.string,包装类（Integer,Double等）。
+
