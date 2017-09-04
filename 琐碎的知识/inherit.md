@@ -58,7 +58,7 @@ Object类是Java中所有类的始祖，在Java中每个类都是由它拓展而
 
 ### equals方法
 
-用于检测一个对象是否等于另一个对象。
+用于检测是否引用的是同一个对象。
 
 对于static boolean equals\(Object a, Object b\)，如果a和b都为null，放回true，如果其中之一为null，则放回false。
 
