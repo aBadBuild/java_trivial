@@ -28,5 +28,5 @@ public class Math{
 
 在程序中可以采用Math.PI的形式来获取这个常量。
 
-如果static关键字被忽略，那么PI就变成了Math类的一个实例域，想要访问PI则需要先通过实例化Math对象来获取。
+如果static关键字被忽略，那么PI就变成了Math类的一个实例域，想要访问PI则需要先通过实例化Math对象来获取，而且，每个Math类的对象都拥有属于自己的PI。
 
