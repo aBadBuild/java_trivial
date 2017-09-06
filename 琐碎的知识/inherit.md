@@ -72,5 +72,5 @@ JDK类中有一些类覆盖了oject类的equals\(\)方法，比较规则为：�
 
 如果参数为null，这个方法返回0。
 
-
+equals和hashCode返回的值是一样的。
 
