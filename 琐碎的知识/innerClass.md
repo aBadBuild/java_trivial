@@ -49,22 +49,26 @@ User.GetName un = new User().new GetName();
 
 ## 局部内部类
 
+类似于这种情况，该内部类只被一个方法所调用，可以使用局部内部类：
+
 ```java
-public static class User {
-		private String name = "yu";
-		
-		public void printName(){
-			class GetName{
-				public String printName(){
-					System.out.print(User.this.name);
-					return User.this.name;
-				}
-			}
-			GetName getName = new GetName();
-			System.out.print(getName.printName());
-		}
-	}
+public static class User {//外围类
+        private String name = "yu";
+
+        public void printName(){//方法
+            class GetName{//方法里的局部类
+                public String printName(){
+                    System.out.print(User.this.name);
+                    return User.this.name;
+                }
+            }
+            GetName getName = new GetName();
+            System.out.print(getName.printName());
+        }
+    }
 ```
 
+局部类不能使用public或private进行声明。
 
+局部类对外部隐藏，即使是外围类也无法对其进行访问。
 
