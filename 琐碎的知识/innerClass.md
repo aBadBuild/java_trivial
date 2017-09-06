@@ -76,5 +76,11 @@ public class User {//外围类
 
 不能生成它的外围类对象。
 
+外部访问静态内部类：
+
+```java
+User.GetInner ui = new User.GetInner();
+```
+
 
 
