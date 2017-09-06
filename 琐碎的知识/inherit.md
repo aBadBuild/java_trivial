@@ -74,3 +74,9 @@ JDK类中有一些类覆盖了oject类的equals\(\)方法，比较规则为：�
 
 equals和hashCode返回的值是一样的。
 
+```java
+static int hash(Objet, ..., Object)
+```
+
+返回一个散列码，由提供的所有对象的散列码组合而得到。
+
