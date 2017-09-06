@@ -82,5 +82,5 @@ public class User {//外围类
 User.GetInner ui = new User.GetInner();
 ```
 
-
+在内部类不需要访问外围类对象的时候，应该使用静态内部类。
 
