@@ -47,5 +47,24 @@ public static class User {//外围类
 User.GetName un = new User().new GetName();
 ```
 
+## 局部内部类
+
+```java
+public static class User {
+		private String name = "yu";
+		
+		public void printName(){
+			class GetName{
+				public String printName(){
+					System.out.print(User.this.name);
+					return User.this.name;
+				}
+			}
+			GetName getName = new GetName();
+			System.out.print(getName.printName());
+		}
+	}
+```
+
 
 
