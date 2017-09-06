@@ -41,5 +41,11 @@ public static class User {
     }
 ```
 
-在外围类的
+在外围类的的作用域之外，可以这样引用内部类：
+
+```java
+User.GetName un = new User().new GetName();
+```
+
+
 
