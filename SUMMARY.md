@@ -5,4 +5,5 @@
     * [大数值](琐碎的知识/bigValue.md)
     * [静态域与静态方法](琐碎的知识/static.md)
     * [继承](琐碎的知识/inherit.md)
+    * [内部类](琐碎的知识/innerClass.md)
 
