@@ -25,7 +25,7 @@ public 内部类(外围类 外围类对象){
 然而在这样的一种情况，当多个内部类嵌套时，即内部类中还有内部类时，outer就不好用了，最好的引用方式为_OuterClass.this._
 
 ```java
-public static class User {//外围类
+public class User {//外围类
         private String name = "yu";
 
         public void printName(){
@@ -52,7 +52,7 @@ User.GetName un = new User().new GetName();
 类似于这种情况，该内部类只被一个方法所调用，可以使用局部内部类：
 
 ```java
-public static class User {//外围类
+public class User {//外围类
         private String name = "yu";
 
         public void printName(){//方法
