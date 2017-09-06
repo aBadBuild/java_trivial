@@ -8,7 +8,7 @@
 
 ## 内部类的访问对象状态
 
-内部类的对象总有一个隐式引用，它指向了创建它的外部类对象，称为outer，我们可以使用~~outer. ~~来引用外围类对象的域。
+内部类的对象总有一个隐式引用，它指向了创建它的外部类对象，称为outer，我们可以使用_outer._ 来引用外围类对象的域。
 
 outer并不是关键字。
 
@@ -22,23 +22,23 @@ public 内部类(外围类 外围类对象){
 
 在访问外围类的private的对象时，无需调用外围类的get方法，或者外围类也无需写get方法，直接调用即可。
 
-然而在这样的一种情况，当多个内部类嵌套时，即内部类中还有内部类时，outer就不好用了，最好的引用方式为OuterClass.this.
+然而在这样的一种情况，当多个内部类嵌套时，即内部类中还有内部类时，outer就不好用了，最好的引用方式为_OuterClass.this._
 
 ```java
 public static class User {
-		private String name = "yu";
-		
-		public void printName(){
-			GetName getName = new GetName();
-			System.out.print(getName.printName());
-		}
-		
-		public class GetName{
-			public String printName(){
-				return User.this.name;
-			}
-		}
-	}
+        private String name = "yu";
+
+        public void printName(){
+            GetName getName = new GetName();
+            System.out.print(getName.printName());
+        }
+
+        public class GetName{
+            public String printName(){
+                return User.this.name;
+            }
+        }
+    }
 ```
 
 
