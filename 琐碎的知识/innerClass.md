@@ -84,3 +84,5 @@ User.GetInner ui = new User.GetInner();
 
 在内部类不需要访问外围类对象的时候，应该使用静态内部类。
 
+声明在接口中的内部类自动成为static和public类。
+
