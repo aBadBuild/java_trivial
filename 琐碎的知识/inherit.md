@@ -64,3 +64,13 @@ Object类是Java中所有类的始祖，在Java中每个类都是由它拓展而
 
 JDK类中有一些类覆盖了oject类的equals\(\)方法，比较规则为：如果两个对象的类型一致，并且内容一致，则返回true,这些类有：java.io.file,java.util.Date,java.lang.string,包装类（Integer,Double等）。
 
+### hashCode方法
+
+散列码是由对象到出的一个整型值，是没有规律的，如果x和y是不同的对象，x.hashCode\(\)!=y.hashCode\(\)。
+
+如果重新定义equals方法，那就必须重新定义hashCode方法。
+
+如果参数为null，这个方法返回0。
+
+
+
