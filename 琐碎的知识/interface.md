@@ -30,7 +30,18 @@
 
 ```java
 public interface ToDoInterface {
-	public void toDo();//员工工作做完后通过这个告诉老板
+    public void toDo();//员工工作做完后通过这个告诉老板
+}
+```
+
+然后是老板对员工做完工作后的回应，通过实现这个接口
+
+```java
+public class BossImp implements ToDoInterface{
+	@Override
+	public void toDo() {
+		System.out.println("继续工作吧你");
+	}	
 }
 ```
 
