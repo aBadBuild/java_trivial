@@ -64,5 +64,19 @@ new Worker().finishWork(new BossImp());
 //继续工作吧你
 ```
 
+当然，我们也可以不定义老板回应的接口实现，而是在方法调用时，以匿名接口实现类来实现
+
+```java
+new Worker().finishWork(new ToDoInterface(){
+			@Override
+			public void toDo() {
+				// TODO Auto-generated method stub
+				System.out.println("继续工作吧垃圾");
+			}
+		});
+```
+
+
+
 
 
