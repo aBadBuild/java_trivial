@@ -38,9 +38,20 @@ public interface ToDoInterface {
 
 ```java
 public class BossImp implements ToDoInterface{
-	@Override
-	public void toDo() {
-		System.out.println("继续工作吧你");
+    @Override
+    public void toDo() {//老板的回应
+        System.out.println("继续工作吧你");
+    }    
+}
+```
+
+然后是员工，员工完成工作后，告诉老板
+
+```java
+public class Worker {	
+	public void finishWork(ToDoInterface toDoInterface){
+		System.out.println("员工工作完成");
+		toDoInterface.toDo();
 	}	
 }
 ```
