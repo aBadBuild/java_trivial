@@ -48,12 +48,18 @@ public class BossImp implements ToDoInterface{
 然后是员工，员工完成工作后，告诉老板
 
 ```java
-public class Worker {	
-	public void finishWork(ToDoInterface toDoInterface){
-		System.out.println("员工工作完成");
-		toDoInterface.toDo();
-	}	
+public class Worker {    
+    public void finishWork(ToDoInterface toDoInterface){
+        System.out.println("员工工作完成");
+        toDoInterface.toDo();//工作完成，告诉老板
+    }    
 }
+```
+
+测试类的调用
+
+```java
+new Worker().finishWork(new BossImp());
 ```
 
 
