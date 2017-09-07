@@ -60,6 +60,8 @@ public class Worker {
 
 ```java
 new Worker().finishWork(new BossImp());
+//员工工作完成
+//继续工作吧你
 ```
 
 
