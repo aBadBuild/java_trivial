@@ -68,15 +68,13 @@ new Worker().finishWork(new BossImp());
 
 ```java
 new Worker().finishWork(new ToDoInterface(){
-			@Override
-			public void toDo() {
-				// TODO Auto-generated method stub
-				System.out.println("继续工作吧垃圾");
-			}
-		});
+            @Override
+            public void toDo() {
+                // TODO Auto-generated method stub
+                System.out.println("继续工作吧垃圾");
+            }
+});
 ```
-
-
 
 
 
