@@ -73,6 +73,8 @@ new Worker().finishWork(new ToDoInterface(){
         System.out.println("继续工作吧垃圾");
     }
 });
+//员工工作完成
+//继续工作吧垃圾
 ```
 
 
