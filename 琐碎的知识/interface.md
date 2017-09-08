@@ -59,7 +59,7 @@ public class Worker {
 
     public void finishWork(){
         System.out.println("员工工作完成");
-        if(toDoInterface !=null){
+        if(toDoInterface != null){
             toDoInterface.toDo();
         }
     }  
