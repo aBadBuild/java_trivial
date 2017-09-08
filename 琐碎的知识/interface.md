@@ -116,5 +116,22 @@ public class Worker {
 }
 ```
 
+测试类的调用
+
+```java
+Worker worker = new Worker();
+		worker.addToDoInterface(new ToDoInterface(){
+			@Override
+			public void toDo() {
+				System.out.println("继续工作吧垃圾");
+			}
+		});
+		BossImp bossImp = new BossImp();
+		worker.addToDoInterface(bossImp);
+		worker.finishWork();
+		worker.removeToDoInterface(bossImp);
+		worker.finishWork();
+```
+
 
 
