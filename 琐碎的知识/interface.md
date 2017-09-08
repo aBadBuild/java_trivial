@@ -52,24 +52,26 @@ public class BossImp implements ToDoInterface{
 ```java
 public class Worker {    
     private ToDoInterface toDoInterface;
-	
-	public void setToDoInterface(ToDoInterface toDoInterface) {
-		this.toDoInterface = toDoInterface;
-	}
 
-	public void finishWork(){
-		System.out.println("员工工作完成");
-		if(toDoInterface !=null){
-			toDoInterface.toDo();
-		}
-	}  
+    public void setToDoInterface(ToDoInterface toDoInterface) {
+        this.toDoInterface = toDoInterface;
+    }
+
+    public void finishWork(){
+        System.out.println("员工工作完成");
+        if(toDoInterface !=null){
+            toDoInterface.toDo();
+        }
+    }  
 }
 ```
 
 测试类的调用
 
 ```java
-new Worker().finishWork(new BossImp());
+Worker worker = new Worker();
+		worker.setToDoInterface(new BossImp());
+		worker.finishWork();
 //员工工作完成
 //继续工作吧你
 ```
