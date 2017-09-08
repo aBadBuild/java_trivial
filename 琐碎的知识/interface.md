@@ -95,24 +95,24 @@ worker.finishWork();
 
 ```java
 public class Worker {
-	
-	private List<ToDoInterface> toDoInterface = new ArrayList<ToDoInterface>();
-	
-	public void addToDoInterface(ToDoInterface toDoInterface) {
-		this.toDoInterface.add(toDoInterface);
-	}
-	
-	public void removeToDoInterface(ToDoInterface toDoInterface) {
-		this.toDoInterface.remove(toDoInterface);
-	}
 
-	public void finishWork(){
-		System.out.println("员工工作完成");
-		for(ToDoInterface toDo: toDoInterface){
-			toDo.toDo();
-		}
-	}
-	
+    private List<ToDoInterface> toDoInterface = new ArrayList<ToDoInterface>();
+
+    public void addToDoInterface(ToDoInterface toDoInterface) {//添加老板的回应
+        this.toDoInterface.add(toDoInterface);
+    }
+
+    public void removeToDoInterface(ToDoInterface toDoInterface) {//移除老板的回应
+        this.toDoInterface.remove(toDoInterface);
+    }
+
+    public void finishWork(){
+        System.out.println("员工工作完成");
+        for(ToDoInterface toDo: toDoInterface){
+            toDo.toDo();
+        }
+    }
+
 }
 ```
 
