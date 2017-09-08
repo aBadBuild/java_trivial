@@ -131,6 +131,11 @@ worker.addToDoInterface(bossImp);
 worker.finishWork();
 worker.removeToDoInterface(bossImp);
 worker.finishWork();
+//员工工作完成
+//继续工作吧垃圾
+//继续工作吧你
+//员工工作完成
+//继续工作吧垃圾
 ```
 
 
