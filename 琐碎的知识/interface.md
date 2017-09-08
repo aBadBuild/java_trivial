@@ -81,10 +81,10 @@ worker.finishWork();
 ```java
 Worker worker = new Worker();
 worker.setToDoInterface(new ToDoInterface(){
-	@Override
-	public void toDo() {
-		System.out.println("继续工作吧垃圾");
-	}
+    @Override
+    public void toDo() {
+        System.out.println("继续工作吧垃圾");
+    }
 });
 worker.finishWork();
 //员工工作完成
