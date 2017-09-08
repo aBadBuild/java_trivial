@@ -91,5 +91,30 @@ worker.finishWork();
 //继续工作吧垃圾
 ```
 
+而在开发的时候，需要考虑的东西比较多，比如我我们要拓展老板集 ，员工工作完以后会得到多个老板的回应，然而老板也存在着变动，有些老板的调离导致员工不再需要得到他的回应，那么，员工的类就应该这样子写了
+
+```java
+public class Worker {
+	
+	private List<ToDoInterface> toDoInterface = new ArrayList<ToDoInterface>();
+	
+	public void addToDoInterface(ToDoInterface toDoInterface) {
+		this.toDoInterface.add(toDoInterface);
+	}
+	
+	public void removeToDoInterface(ToDoInterface toDoInterface) {
+		this.toDoInterface.remove(toDoInterface);
+	}
+
+	public void finishWork(){
+		System.out.println("员工工作完成");
+		for(ToDoInterface toDo: toDoInterface){
+			toDo.toDo();
+		}
+	}
+	
+}
+```
+
 
 
