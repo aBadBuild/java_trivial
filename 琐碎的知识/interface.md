@@ -70,8 +70,8 @@ public class Worker {
 
 ```java
 Worker worker = new Worker();
-		worker.setToDoInterface(new BossImp());
-		worker.finishWork();
+worker.setToDoInterface(new BossImp());
+worker.finishWork();
 //员工工作完成
 //继续工作吧你
 ```
@@ -79,12 +79,14 @@ Worker worker = new Worker();
 当然，我们也可以不定义老板回应的接口实现，而是在方法调用时，以匿名接口实现类来实现
 
 ```java
-new Worker().finishWork(new ToDoInterface(){
-    @Override
-    public void toDo() {
-        System.out.println("继续工作吧垃圾");
-    }
+Worker worker = new Worker();
+worker.setToDoInterface(new ToDoInterface(){
+	@Override
+	public void toDo() {
+		System.out.println("继续工作吧垃圾");
+	}
 });
+worker.finishWork();
 //员工工作完成
 //继续工作吧垃圾
 ```
