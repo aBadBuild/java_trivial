@@ -66,7 +66,7 @@ public class Worker {
 }
 ```
 
-测试类的调用
+测试类的调用及结果
 
 ```java
 Worker worker = new Worker();
@@ -116,7 +116,7 @@ public class Worker {
 }
 ```
 
-测试类的调用
+测试类的调用及结果
 
 ```java
 Worker worker = new Worker();
