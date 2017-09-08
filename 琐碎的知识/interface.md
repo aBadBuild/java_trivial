@@ -51,10 +51,18 @@ public class BossImp implements ToDoInterface{
 
 ```java
 public class Worker {    
-    public void finishWork(ToDoInterface toDoInterface){
-        System.out.println("员工工作完成");
-        toDoInterface.toDo();//工作完成，告诉老板
-    }    
+    private ToDoInterface toDoInterface;
+	
+	public void setToDoInterface(ToDoInterface toDoInterface) {
+		this.toDoInterface = toDoInterface;
+	}
+
+	public void finishWork(){
+		System.out.println("员工工作完成");
+		if(toDoInterface !=null){
+			toDoInterface.toDo();
+		}
+	}  
 }
 ```
 
