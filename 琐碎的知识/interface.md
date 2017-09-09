@@ -106,7 +106,7 @@ public class Worker {
 
     public void finishWork(){
         System.out.println("员工工作完成");
-        for(ToDoInterface toDo: toDoInterface){
+        for(ToDoInterface toDo : toDoInterface){
             toDo.toDo();
         }
     }
