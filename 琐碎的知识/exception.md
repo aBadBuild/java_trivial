@@ -4,3 +4,9 @@
 
 ![](/assets/exception1.png)
 
+```java
+异常对象.printStackTrace();//打印异常信息
+```
+
+
+
