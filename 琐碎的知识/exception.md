@@ -40,5 +40,13 @@ finally{
 
 我们以常规的异常捕获的处理方法的时候，喜欢把关闭资源的语句写在final里面，然而，一些关闭资源的语句本身也会抛出异常，所以我们可以使用带资源的try语句。
 
+格式例子：
+
+```java
+try(Scanner in = new Scanner(new FileInputStream("..."))){
+    //TODO
+}
+```
+
 
 
