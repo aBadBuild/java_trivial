@@ -48,5 +48,11 @@ try(Scanner in = new Scanner(new FileInputStream("..."))){
 }
 ```
 
+当然每一个资源都属于实现了AutoCloseable接口的类：
+
+```java
+void close() throws Exception
+```
+
 
 
