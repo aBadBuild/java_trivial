@@ -71,7 +71,5 @@ String description = out.toString();
 
 ## 自定义异常
 
-
-
-
+自定义异常类可以通过继承Exception或者RuntimeException来实现。可以通过构造一个传入字符串的构造方法，方法里面调用super\(传入的字符串\)，来实现对自定义错误信息的输出。
 
