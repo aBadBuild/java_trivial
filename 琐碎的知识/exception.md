@@ -57,5 +57,13 @@ void close() throws Exception
 
 > 如果没有任何地方捕获异常，就会显示异常踪迹——列出异常抛出时，所有未决方法的调用信息。该信息会被送到错误消息的流System.err。
 
+如果想存储异常的堆栈踪迹，可以像这样将其放到字符串里：
+
+```java
+ByteArrayOutPutStream out = new ByteArrayOutPutStream();
+ex.printStackTrace(out);
+String description = out.toString();
+```
+
 
 
