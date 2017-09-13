@@ -69,5 +69,9 @@ ex.printStackTrace(out);
 String description = out.toString();
 ```
 
+## 自定义异常
+
+
+
 
 
