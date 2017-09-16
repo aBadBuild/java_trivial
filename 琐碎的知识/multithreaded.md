@@ -61,9 +61,10 @@ public class threadTest {
     public static void main(String[] args) {
         new Thread(new RunnableImp()).start();
         new Thread(new RunnableImp()).start();
+        //需要一个Thread对象来调用star()方法。
     }
 }
 ```
 
-需要一个Thread对象来调用star\(\)方法。
+
 
