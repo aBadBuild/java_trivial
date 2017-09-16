@@ -5,7 +5,7 @@
 如果把域定义为static，每个类中只有一个这样的域。
 
 ```java
-class student{
+class Student{
     private static int numbers = 1;
     private int id = 1;
     ...
@@ -60,6 +60,4 @@ Math.pow(x, a);
 在程序启时还没有任何一个对象，静态的main方法将执行并创建程序所需的对象。
 
 每一个类都可以有一个main方法，只是一个常用于对类进行单元测试的技巧。
-
-
 
