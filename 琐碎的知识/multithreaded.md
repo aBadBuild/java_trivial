@@ -92,18 +92,18 @@ public class CallableImp implements Callable<Object> {
 
 ```java
 public class ThreadTest {
-	public static void main(String[] args) throws InterruptedException, ExecutionException {		
-		CallableImp thread1 = new CallableImp();
-		FutureTask<Object> result1 = new FutureTask<>(thread1);
-		
-		CallableImp thread2 = new CallableImp();
-		FutureTask<Object> result2 = new FutureTask<>(thread2);
-				
-		new Thread(result1).start();
-		new Thread(result2).start();
-		System.out.println(result1.get());
-		System.out.println(result2.get());		
-	}
+    public static void main(String[] args) throws InterruptedException, ExecutionException {        
+        CallableImp thread1 = new CallableImp();
+        FutureTask<Object> result1 = new FutureTask<>(thread1);
+
+        CallableImp thread2 = new CallableImp();
+        FutureTask<Object> result2 = new FutureTask<>(thread2);
+
+        new Thread(result1).start();
+        new Thread(result2).start();
+        System.out.println(result1.get());//通过FutureTask的父接口的get()方法来获取返回的结果
+        System.out.println(result2.get());        
+    }
 }
 ```
 
