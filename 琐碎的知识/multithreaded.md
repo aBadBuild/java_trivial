@@ -111,5 +111,17 @@ public class ThreadTest {
 
 ## 线程的状态
 
+线程可以有以下6中状态：
+
+* New（新创建）
+  * > 当new操作符创建一个新线程时，如new Thread\(r\)，该线程还没有开始运行。
+* Runnble（可运行）
+* Blocked（被阻塞）
+* Waiting（等待）
+* Timed waiting（计时等待）
+* Terminated（被终止）
+
+
+
 
 
