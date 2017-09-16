@@ -14,7 +14,15 @@
 在多线程的每个主体类中都必须覆写Thread类的run\(\)方法，该方法没有返回值，意味着线程一旦执行就要一直执行，不能返回内容。
 
 ```java
-
+public class ExtendsThread extends Thread {
+	
+	public void run(){
+		for(int i = 0; i<500; i++){
+			System.out.println(i);
+		}
+	}
+	
+}
 ```
 
 如果直接调用run\(\)方法，并不能启动多线程，想要启动多线程必须使用Thread类的star\(\)方法（调用此方法执行的方法体是run\(\)方法定义的）。
