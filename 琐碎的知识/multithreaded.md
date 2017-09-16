@@ -156,5 +156,9 @@ public class ThreadTest {
 
 线程的run方法不能抛出任何被检测的异常，但是，不被检测的异常会导致线程终止。
 
+在线程死亡之前，异常常被传递到一个用于未捕获异常的处理器。该处理器必须属于一个实现Thread.UncaughtExceptionHandler接口的类，这个接口只有一个方法：void uncaughtException\(Thread t, Throwable e\)。可以用setUncaughtExceptionHandler方法为任何线程安装一个处理器。
 
+也可以用Thread类的静态方法setDefaultUncaughtExceptionHandler为所有线程安装一个默认的处理器。
+
+替换处理器可以使用日志API发送未捕获异常的报告到日志文件。
 
