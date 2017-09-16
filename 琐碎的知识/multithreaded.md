@@ -76,17 +76,36 @@ public class ThreadTest {
 执行完线程主体方法call\(\)后可以返回一个结果，而返回的结果类型由Callable接口上的泛型来决定。
 
 ```java
-public class CallableImp implements Callable<Object> {	
-	@Override
-	public Object call() throws Exception {
-		int i =0;
-		for(; i<500; i++){
-			System.out.println(i);
-		}
-		return i;
-	}	
+public class CallableImp implements Callable<Object> {    
+    @Override
+    public Object call() throws Exception {
+        int i =0;
+        for(; i<500; i++){
+            System.out.println(i);
+        }
+        return i;
+    }    
 }
 ```
 
 运行Callable任务可以拿到一个Future对象，表示异步计算的结果。它提供了检查计算是否完成的方法，以等待计算的完成，并检索计算的结果。通过Future对象可以了解任务执行情况，可取消任务的执行，还可获取执行结果。
+
+```java
+public class ThreadTest {
+	public static void main(String[] args) throws InterruptedException, ExecutionException {		
+		CallableImp thread1 = new CallableImp();
+		FutureTask<Object> result1 = new FutureTask<>(thread1);
+		
+		CallableImp thread2 = new CallableImp();
+		FutureTask<Object> result2 = new FutureTask<>(thread2);
+				
+		new Thread(result1).start();
+		new Thread(result2).start();
+		System.out.println(result1.get());
+		System.out.println(result2.get());		
+	}
+}
+```
+
+
 
