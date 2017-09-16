@@ -27,13 +27,14 @@ public class ExtendsThread extends Thread {
 
 ```java
 public class threadTest {
-	public static void main(String[] args) {		
-		ExtendsThread thread1 = new ExtendsThread();
-		ExtendsThread thread2 = new ExtendsThread();
-		thread1.start();
-		thread2.start();		
-	}
+    public static void main(String[] args) {        
+        ExtendsThread thread1 = new ExtendsThread();
+        ExtendsThread thread2 = new ExtendsThread();
+        thread1.start();
+        thread2.start();        
+    }
 }
+//测试的结果是两个线程的数值交替打印0 1 2 3 4 0 1 2 3 4 5
 ```
 
 
