@@ -172,18 +172,16 @@ public class ThreadTest {
 
 ```java
 public class Bank {
-    public static int sumMoney = 10000;    
-    public void transfer(int from, int to, int number){
-        if(number > 10000 || number < 0){
-            System.out.println(from + "..error");
-            return;
-        }
-        sumMoney -= number;
-        System.out.println(from + " to " + to + ", sum -" + number);
-        sumMoney += number;
-        System.out.println(from + " to " + to + ", sum +" + number);
-        System.out.println(from + "..sum = " + sumMoney);
-    }
+	public static int sumMoney = 10000;	
+	public void transfer(int from, int to, int number){
+		if(number > 10000 || number < 0){
+			System.out.println(from + "..error");
+			return;
+		}
+		sumMoney -= number;
+		sumMoney += number;
+		System.out.println(from + ", "  + to + "..sum = " + sumMoney);
+	}
 }
 ```
 
@@ -203,13 +201,12 @@ public class TransferThread implements Runnable {
 
 ```java
 public class SynchronizationTest {
-	public static void main(String[] args) {		
-		for(int i = 0; i < 50; i++){
-			new Thread(new TransferThread()).start();
-		}		
-	}
+    public static void main(String[] args) {        
+        for(int i = 0; i < 50; i++){
+            new Thread(new TransferThread()).start();
+        }        
+    }
 }
-
 ```
 
 
