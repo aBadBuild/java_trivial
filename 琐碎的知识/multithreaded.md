@@ -25,3 +25,16 @@ public class ExtendsThread extends Thread {
 
 如果直接调用run\(\)方法，并不能启动多线程，想要启动多线程必须使用Thread类的star\(\)方法（调用此方法执行的方法体是run\(\)方法定义的）。
 
+```java
+public class threadTest {
+	public static void main(String[] args) {		
+		ExtendsThread thread1 = new ExtendsThread();
+		ExtendsThread thread2 = new ExtendsThread();
+		thread1.start();
+		thread2.start();		
+	}
+}
+```
+
+
+
