@@ -31,7 +31,7 @@ public class ExtendsThread extends Thread {
 如果直接调用run\(\)方法，并不能启动多线程，想要启动多线程必须使用Thread类的star\(\)方法（调用此方法执行的方法体是run\(\)方法定义的）。
 
 ```java
-public class threadTest {
+public class ThreadTest {
     public static void main(String[] args) {        
         ExtendsThread thread1 = new ExtendsThread();
         ExtendsThread thread2 = new ExtendsThread();
@@ -62,7 +62,7 @@ public class RunnableImp implements Runnable {
 客户端的调用：
 
 ```java
-public class threadTest {
+public class ThreadTest {
     public static void main(String[] args) {
         new Thread(new RunnableImp()).start();
         new Thread(new RunnableImp()).start();
@@ -72,8 +72,6 @@ public class threadTest {
 ```
 
 ### 实现callable接口
-
-
 
 
 
