@@ -190,13 +190,26 @@ public class Bank {
 线程类：
 
 ```java
-public class TransferThread implements Runnable {	
-	@Override
-	public void run() {
-		int money = (int)(Bank.sumMoney * Math.random());
-		new Bank().transfer(money, money, money);
+public class TransferThread implements Runnable {    
+    @Override
+    public void run() {
+        int money = (int)(Bank.sumMoney * Math.random());
+        new Bank().transfer(money, money, money);
+    }
+}
+```
+
+测试类：
+
+```java
+public class SynchronizationTest {
+	public static void main(String[] args) {		
+		for(int i = 0; i < 50; i++){
+			new Thread(new TransferThread()).start();
+		}		
 	}
 }
+
 ```
 
 
