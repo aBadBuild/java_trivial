@@ -43,3 +43,16 @@ public class threadTest {
 
 通过写run\(\)方法，然后实例化一个Thread对象，实例选用的构造方法为传入一个Runnable对象，如Thread thread = new Thread\(Runnable对象\)，再调用thread的star\(\)方法。
 
+```java
+public class RunnableImp implements Runnable {
+	@Override
+	public void run() {
+		for(int i = 0; i<500; i++){
+			System.out.println(i);
+		}
+	}
+}
+```
+
+
+
