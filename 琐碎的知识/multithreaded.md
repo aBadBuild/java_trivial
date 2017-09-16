@@ -164,3 +164,28 @@ public class ThreadTest {
 
 如果不安装处理器，默认的处理器为空。
 
+## 同步
+
+在一个银行转账的场景中，用户之间的转账访问到同一对象资源时，在没有经过处理的线程可能会导致个人账户出现错误。现模拟一个多线程对同一对象修改的场景。
+
+资源类：
+
+```java
+public class Bank {
+	public static int sumMoney = 10000;	
+	public void transfer(int from, int to, int number){
+		if(number > 10000 || number < 0){
+			System.out.println(from + "..error");
+			return;
+		}
+		sumMoney -= number;
+		System.out.println(from + " to " + to + ", sum -" + number);
+		sumMoney += number;
+		System.out.println(from + " to " + to + ", sum +" + number);
+		System.out.println(from + "..sum = " + sumMoney);
+	}
+}
+```
+
+
+
