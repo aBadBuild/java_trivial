@@ -103,7 +103,7 @@ public class ThreadTest {
 
         new Thread(result1).start();
         new Thread(result2).start();
-        System.out.println(result1.get());//通过FutureTask的父接口的get()方法来获取返回的结果
+        System.out.println(result1.get());//通过FutureTask的父接口Future的get()方法来获取返回的结果
         System.out.println(result2.get());        
     }
 }
