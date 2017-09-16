@@ -71,5 +71,9 @@ public class threadTest {
 }
 ```
 
+### 实现callable接口
+
+
+
 
 
