@@ -9,6 +9,11 @@
 * 继承Thread类；
 * 实现Runnable接口（Callable接口）。
 
+两者的区别：
+
+* Thread是Runnable的子类，使用Runnable可以避免但单继承的局限；
+* Runnable接口实现可以比Thread类实现多线程更加的描述数据共享的概念。
+
 ### 继承Thread类
 
 在多线程的每个主体类中都必须覆写Thread类的run\(\)方法，该方法没有返回值，意味着线程一旦执行就要一直执行，不能返回内容。
