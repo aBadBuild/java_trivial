@@ -134,7 +134,11 @@ public class ThreadTest {
 
 ## 线程属性
 
+### 线程的优先级
 
+默认情况下，一个线程继承它的父线程的优先级。
+
+可以用setPriority方法提高 或减低任何一个线程的优先级，可以将优先级设置为在MIN_PRIORITY_（在Thread定义为1）与MAXPRIORITY（定义为10）之间的任何值，NORM\_PRIORITY被定义为5。
 
 
 
