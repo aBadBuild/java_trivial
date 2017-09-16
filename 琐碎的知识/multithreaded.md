@@ -37,5 +37,7 @@ public class threadTest {
 //测试的结果是两个线程的数值交替打印 0 1 2 3 4 0 1 2 3 4 5
 ```
 
+### 实现Runnable接口
+
 
 
