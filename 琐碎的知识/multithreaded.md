@@ -71,7 +71,13 @@ public class ThreadTest {
 }
 ```
 
-### 实现callable接口
+### 实现Callable接口
+
+执行完线程主体方法call\(\)后可以返回一个结果，而返回的结果类型由Callable接口上的泛型来决定。
+
+```java
+
+```
 
 
 
