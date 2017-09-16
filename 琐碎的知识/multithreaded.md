@@ -45,11 +45,24 @@ public class threadTest {
 
 ```java
 public class RunnableImp implements Runnable {
-	@Override
-	public void run() {
-		for(int i = 0; i<500; i++){
-			System.out.println(i);
-		}
+    @Override
+    public void run() {
+        for(int i = 0; i<500; i++){
+            System.out.println(i);
+        }
+    }
+}
+```
+
+客户端的调用：
+
+```java
+public class threadTest {
+	public static void main(String[] args) {
+		
+		new Thread(new RunnableImp()).start();
+		new Thread(new RunnableImp()).start();
+		
 	}
 }
 ```
