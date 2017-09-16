@@ -95,10 +95,10 @@ public class CallableImp implements Callable<Object> {
 ```java
 public class ThreadTest {
     public static void main(String[] args) throws InterruptedException, ExecutionException {        
-        CallableImp thread1 = new CallableImp();
+        CallableImp ca1 = new CallableImp();
         FutureTask<Object> result1 = new FutureTask<>(thread1);
 
-        CallableImp thread2 = new CallableImp();
+        CallableImp ca2 = new CallableImp();
         FutureTask<Object> result2 = new FutureTask<>(thread2);
 
         new Thread(result1).start();
@@ -139,6 +139,4 @@ public class ThreadTest {
 默认情况下，一个线程继承它的父线程的优先级。
 
 可以用setPriority方法提高 或减低任何一个线程的优先级，可以将优先级设置为在MIN_PRIORITY_（在Thread定义为1）与MAXPRIORITY（定义为10）之间的任何值，NORM\_PRIORITY被定义为5。
-
-
 
