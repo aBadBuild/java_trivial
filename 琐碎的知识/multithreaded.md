@@ -41,3 +41,5 @@ public class threadTest {
 
 虽然Thread可以实现多线程的主体类定义，但是他有一个问题，java具有单继承局限，为了解决这一问题，提出了该接口。与继承Thread类相比较，并没有继承到star\(\)方法，一个接口可以创建多个互不干扰的线程对象。
 
+通过覆写run\(\)方法，然后实例化一个Thread对象，实例选用的构造方法为传入一个Runnable对象，如Thread thread = new Thread\(Runnable对象\)，再调用thread的star\(\)方法。
+
