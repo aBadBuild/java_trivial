@@ -140,3 +140,5 @@ public class ThreadTest {
 
 可以用setPriority方法提高 或减低任何一个线程的优先级，可以将优先级设置为在MIN_PRIORITY_（在Thread定义为1）与MAXPRIORITY（定义为10）之间的任何值，NORM\_PRIORITY被定义为5。
 
+如果有几个高优先级的线程没有进入非活动状态，第优先级的线程可能永远也不能执行。
+
