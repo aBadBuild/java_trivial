@@ -96,10 +96,10 @@ public class CallableImp implements Callable<Object> {
 public class ThreadTest {
     public static void main(String[] args) throws InterruptedException, ExecutionException {        
         CallableImp ca1 = new CallableImp();
-        FutureTask<Object> result1 = new FutureTask<>(thread1);
+        FutureTask<Object> result1 = new FutureTask<>(ca1);
 
         CallableImp ca2 = new CallableImp();
-        FutureTask<Object> result2 = new FutureTask<>(thread2);
+        FutureTask<Object> result2 = new FutureTask<>(ca2);
 
         new Thread(result1).start();
         new Thread(result2).start();
