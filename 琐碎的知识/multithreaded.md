@@ -200,34 +200,33 @@ public class TransferThread implements Runnable {
 测试类：
 
 ```java
-public class SynchronizationTest {
-    public static void main(String[] args) {        
-        for(int i = 0; i < 150; i++){
-            new Thread(new TransferThread()).start();
-        }        
-    }
+public class SynchronizationTest {	
+	public static void main(String[] args) {
+		final int SUM = 250; 		
+		for(int i = 0; i < SUM; i++){
+			new Thread(new TransferThread()).start();
+		}				
+	}
 }
 ```
 
 测试结果部分截取（如果测试没有达到预期的出错效果，把测试类中的循环次数增加，测试多几次）：
 
 ```
-8243, 8243..sum = 10000
-7390, 7390..sum = 10000
-8635, 8635..sum = 12589
-35, 35..sum = 12589
-6046, 6046..sum = 12589
-9111, 9111..sum = 12589
-501, 501..sum = 12589
-9063, 9063..sum = 12589
-10007..error
-1365, 1365..sum = 12589
-12557..error
-1446, 1446..sum = 12589
-11331..error
-7597, 7597..sum = 12589
-7490, 7490..sum = 12589
-12205..error
+12680..error
+4061, ..sum = 14677
+11358..error
+21, ..sum = 14677
+3688, ..sum = 14677
+3650, ..sum = 14677
+2224, ..sum = 14677
+589, ..sum = 14677
+12738..error
+12862..error
+3320, ..sum = 14677
+11298..error
+4940, ..sum = 14677
+14014..error
 ```
 
 
