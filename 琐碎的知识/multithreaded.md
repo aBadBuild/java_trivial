@@ -190,14 +190,14 @@ public class Bank {
 
 ```java
 public class TransferThread implements Runnable {
-	private Bank bank ;	
-	public TransferThread(Bank bank){
-		this.bank = bank;
-	}	
-	@Override
-	public void run() {
-		bank.transfer((int)(Bank.sumMoney * Math.random()));
-	}
+    private Bank bank ;    
+    public TransferThread(Bank bank){
+        this.bank = bank;
+    }    
+    @Override
+    public void run() {
+        bank.transfer((int)(Bank.sumMoney * Math.random()));
+    }
 }
 ```
 
@@ -234,5 +234,7 @@ public class SynchronizationTest {
 14014..error
 ```
 
+### 加锁
 
+为了防止多线程访问同一资源时造成冲突，通过对一个对象加锁，使其他线程在调用该对象的加锁部分时被阻塞，直到第一个线程释放锁对象。
 
