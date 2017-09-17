@@ -172,24 +172,18 @@ public class ThreadTest {
 
 ```java
 public class Bank {
-	public static int sumMoney = 10000;
-	private Lock bankLock = new ReentrantLock();
-	public void transfer(int number) {
-		bankLock.lock();
-		try{
-			if(number > 10000 || number < 0){
-				System.out.println(number + "..error");
-				return;
-			}
-			sumMoney -= number;
-			sumMoney += number;
-			System.out.println(number + ", " + "..sum = " + sumMoney);
-		}finally{
-			bankLock.unlock();
-		}
-	}
+    public static int sumMoney = 10000;
+    public void transfer(int number) {
+        bankLock.lock();
+        if(number > 10000 || number < 0){
+            System.out.println(number + "..error");
+            return;
+        }
+        sumMoney -= number;
+        sumMoney += number;
+        System.out.println(number + ", " + "..sum = " + sumMoney);
+    }
 }
-
 ```
 
 线程类：
