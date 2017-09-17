@@ -242,24 +242,26 @@ public class SynchronizationTest {
 
 ```java
 public class Bank {
-	public static int sumMoney = 10000;
-	private Lock bankLock = new ReentrantLock();
-	public void transfer(int number) {
-		bankLock.lock();
-		try{
-			if(number > 10000 || number < 0){
-				System.out.println(number + "..error");
-				return;
-			}
-			sumMoney -= number;
-			sumMoney += number;
-			System.out.println(number + ", " + "..sum = " + sumMoney);
-		}finally{
-			bankLock.unlock();
-		}
-	}
+    public static int sumMoney = 10000;
+    private Lock bankLock = new ReentrantLock();//实例化一个锁
+    public void transfer(int number) {
+        bankLock.lock();//获取锁
+        try{
+            if(number > 10000 || number < 0){
+                System.out.println(number + "..error");
+                return;
+            }
+            sumMoney -= number;
+            sumMoney += number;
+            System.out.println(number + ", " + "..sum = " + sumMoney);
+        }finally{
+            bankLock.unlock();//释放锁
+        }
+    }
 }
 ```
+
+通过上面注释的规范来定义，try...finally也是必不可少的，因为最终都要把锁给释掉。
 
 
 
