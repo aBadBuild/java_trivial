@@ -238,3 +238,28 @@ public class SynchronizationTest {
 
 为了防止多线程访问同一资源时造成冲突，通过对一个对象加锁，使其他线程在调用该对象的加锁部分时被阻塞，直到第一个线程释放锁对象。
 
+此时资源类改为：
+
+```java
+public class Bank {
+	public static int sumMoney = 10000;
+	private Lock bankLock = new ReentrantLock();
+	public void transfer(int number) {
+		bankLock.lock();
+		try{
+			if(number > 10000 || number < 0){
+				System.out.println(number + "..error");
+				return;
+			}
+			sumMoney -= number;
+			sumMoney += number;
+			System.out.println(number + ", " + "..sum = " + sumMoney);
+		}finally{
+			bankLock.unlock();
+		}
+	}
+}
+```
+
+
+
