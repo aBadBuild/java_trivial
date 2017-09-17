@@ -9,6 +9,10 @@
   * [异常](琐碎的知识/exception.md)
   * [多线程](琐碎的知识/多线程/README.md)
     * [基础运用](琐碎的知识/多线程/multithreaded1.md)
+    * [关于锁](琐碎的知识/多线程/multithreaded2.md)
+
+
+
 
 
 
