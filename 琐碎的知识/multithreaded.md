@@ -189,25 +189,29 @@ public class Bank {
 线程类：
 
 ```java
-public class TransferThread implements Runnable {    
-    @Override
-    public void run() {
-        new Bank().transfer((int)(Bank.sumMoney * Math.random()));
-    }
+public class TransferThread implements Runnable {
+	private Bank bank ;	
+	public TransferThread(Bank bank){
+		this.bank = bank;
+	}	
+	@Override
+	public void run() {
+		bank.transfer((int)(Bank.sumMoney * Math.random()));
+	}
 }
 ```
 
 测试类：
 
 ```java
-public class SynchronizationTest {	
-	public static void main(String[] args) {
-		final int SUM = 250; 
-		Bank bank = new Bank();
-		for(int i = 0; i < SUM; i++){
-			new Thread(new TransferThread(bank)).start();
-		}				
-	}
+public class SynchronizationTest {    
+    public static void main(String[] args) {
+        final int SUM = 250; 
+        Bank bank = new Bank();
+        for(int i = 0; i < SUM; i++){
+            new Thread(new TransferThread(bank)).start();
+        }                
+    }
 }
 ```
 
