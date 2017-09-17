@@ -202,9 +202,10 @@ public class TransferThread implements Runnable {
 ```java
 public class SynchronizationTest {	
 	public static void main(String[] args) {
-		final int SUM = 250; 		
+		final int SUM = 250; 
+		Bank bank = new Bank();
 		for(int i = 0; i < SUM; i++){
-			new Thread(new TransferThread()).start();
+			new Thread(new TransferThread(bank)).start();
 		}				
 	}
 }
