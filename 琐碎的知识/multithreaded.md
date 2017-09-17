@@ -192,8 +192,7 @@ public class Bank {
 public class TransferThread implements Runnable {    
     @Override
     public void run() {
-        int money = (int)(Bank.sumMoney * Math.random());
-        new Bank().transfer(money, money, money);
+        new Bank().transfer((int)(Bank.sumMoney * Math.random()));
     }
 }
 ```
