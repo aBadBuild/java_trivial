@@ -5,5 +5,7 @@
 * 5个核心类：File，InputStream，OutputStream，Reader，Writer；
 * 1个核心接口：Serializable。
 
+io包的结构：![](/assets/io1.png)
+
 
 
