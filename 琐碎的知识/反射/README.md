@@ -8,5 +8,31 @@
 * 通过类的.class属性；
 * 通过Class的方法public static Class&lt;?&gt; forName\(String className\)；
 
+## 基本使用
+
+### 获取实例
+
+拥有无参构造方法的类：
+
+```java
+//取得class对象
+Class<?> cls = Class.forName("bean.TestModelNone");
+//获得实例，等同于new
+Object obj = cls.newInstance();
+TestModelNone model = (TestModelNone) obj;
+```
+
+拥有无参或有参构造方法的类：
+
+```java
+//取得class对象
+Class<?> cls = Class.forName("bean.TestModelBuild");
+//返回制定参数类型的所有构造器，包括public的和非public的，当然也包括private的
+Constructor<?> cons = cls.getConstructor(String.class, int.class);
+//传递参数，获得实例
+Object obj = cons.newInstance("11", 11);
+TestModelBuild model = (TestModelBuild) obj;
+```
+
 
 
