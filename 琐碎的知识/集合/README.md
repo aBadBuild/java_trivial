@@ -6,9 +6,9 @@ Map是Java.util包中的另一个接口，它和Collection接口没有关系，�
 
 Iterator，所有的集合类都实现了Iterator接口，这是一个用于遍历集合中元素的接口，主要包含以下三种方法：
 
-1. hasNext\(\)是否还有下一个元素。
-2. next\(\)返回下一个元素。
-3. remove\(\)删除当前元素。
+1. `hasNext()`是否还有下一个元素。
+2. `next()`返回下一个元素。
+3. `remove()`删除当前元素。
 
 ![](/assets/aggregate.png)
 
