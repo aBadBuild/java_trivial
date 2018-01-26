@@ -10,5 +10,9 @@ Iterator，所有的集合类都实现了Iterator接口，这是一个用于遍�
 2. `next()`返回下一个元素。
 3. `remove()`删除当前元素。
 
-![](/assets/aggregate.png)![](/assets/specific_aggregate.png)
+> 图中的LinkIterator改为ListIterator。
+>
+> ![](/assets/aggregate.png)![](/assets/specific_aggregate.png)
+
+
 
